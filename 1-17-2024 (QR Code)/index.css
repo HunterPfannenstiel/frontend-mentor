@@ -1,60 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
 * {
-    --padding: 1rem;
-    --white: hsl(0, 0%, 100%);
-    --light-gray: hsl(212, 45%, 89%);
-    --grayish-blue: hsl(220, 15%, 55%);
-    --dark-blue: hsl(218, 44%, 22%);
+  --padding: 1rem;
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
 
-    --primary-font: 'Outfit', sans-serif;;
-    --bold-weight: 700;
-    --normal-weight: 400;
+  --primary-font: "Outfit", sans-serif;
+  --bold-weight: 700;
+  --normal-weight: 400;
 }
 
 body {
-    background-color: var(--light-gray);
+  background-color: var(--light-gray);
 }
 
 .container {
-    border-radius: 20px;
-    max-width: 315px;
-    background-color: #FFF;
-    padding: var(--padding);
-    margin-inline: auto;
+  border-radius: 20px;
+  max-width: 315px;
+  background-color: #fff;
+  padding: var(--padding);
+  margin-inline: auto;
 }
 
 .image-container {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  display: block;
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding);
-    text-align: center;
-    font-family: var(--primary-font);
-    padding: var(--padding)
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
+  text-align: center;
+  font-family: var(--primary-font);
+  padding: var(--padding);
 }
 
 .text h1 {
-    color: var(--dark-blue);
-    font-weight: var(--bold-weight);
-    font-size: 1.5rem;
-    margin: 0;
+  color: var(--dark-blue);
+  font-weight: var(--bold-weight);
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .text p {
-    color: var(--grayish-blue);
-    font-size: 0.950rem;
-    font-weight: var(--normal-weight);
-    margin: 0;
+  color: var(--grayish-blue);
+  font-size: 0.95rem;
+  font-weight: var(--normal-weight);
+  margin: 0;
 }
