@@ -160,7 +160,7 @@ main {
   line-height: 150%;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 45em) {
   :root {
     --fs-600: 3rem;
   }
