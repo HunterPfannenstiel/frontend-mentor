@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs">
+        <div class="input-container">
+          <label for="day">DAY</label
+          ><input type="number" id="day" placeholder="DD" />
+        </div>
+        <div class="input-container">
+          <label for="month">MONTH</label
+          ><input type="number" id="month" placeholder="MM" />
+        </div>
+        <div class="input-container">
+          <label for="year">YEAR</label
+          ><input type="number" id="year" placeholder="YYYY" />
+        </div>
+      </div>
+      <div class="values">
+        <p><span>38</span> years</p>
+        <p><span>3</span> months</p>
+        <p><span>26</span> days</p>
+        <button class="arrow-btn" id="btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="44"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const button = document.getElementById("btn");
+    const inputs = document.getElementsByClassName("input-container");
+    let toggle = false;
+    button.addEventListener("click", () => {
+      for (let i = 0; i < inputs.length; i++) {
+        if (toggle) {
+          inputs[i].children[0].classList.remove("invalid");
+          inputs[i].children[1].classList.remove("invalid");
+        } else {
+          inputs[i].children[0].classList.add("invalid");
+          inputs[i].children[1].classList.add("invalid");
+        }
+      }
+      toggle = !toggle;
+    });
+  </script>
+</html>

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit; /*Forces you to declare what heading levels look like*/
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: "none";
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  max-width: unset;
+}
+
+:root {
+  --clr-primary: hsl(259, 100%, 65%);
+  --clr-error-hsl: 0, 100%, 67%;
+  --clr-error: hsl(var(--clr-error-hsl));
+
+  --clr-accent-1: hsl(0, 0%, 100%);
+  --clr-accent-1-50: hsl(0, 0%, 94%);
+  --clr-accent-1-100: hsl(0, 1%, 44%);
+  --clr-accent-2: hsl(0, 0%, 86%);
+  --clr-accent-text: hsl(0, 0%, 8%);
+
+  --font-family: "Poppins", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-700: 3.5rem;
+  --fs-800: 4.5rem;
+
+  --padding: 1rem;
+  --padding-large: calc(var(--padding) * 3);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-400);
+  background-color: var(--clr-accent-1-50);
+}
+
+.container {
+  padding-inline: var(--padding);
+  border-radius: 24px;
+  border-bottom-right-radius: 72px;
+  background-color: var(--clr-accent-1);
+  margin-inline: auto;
+  width: 90%;
+}
+
+.inputs {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding-block: var(--padding-large);
+}
+
+.arrow-btn {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--clr-primary);
+  width: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn svg {
+  scale: 0.6;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  color: var(--clr-accent-1-100);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-300);
+  letter-spacing: 2px;
+}
+
+.input-container label.invalid {
+  color: var(--clr-error);
+}
+
+.input-container input {
+  --padding: 0.5rem;
+  font-weight: var(--fw-bold);
+  border-radius: 4px;
+  border: 1px solid var(--clr-accent-1-100);
+  padding: calc(var(--padding) * 1.5) var(--padding);
+}
+
+.input-container input:focus {
+  outline: none !important;
+  border-color: var(--clr-primary);
+}
+
+.input-container input.invalid {
+  border: 1px solid var(--clr-error);
+  background-color: hsl(var(--clr-error-hsl), 2%);
+}
+
+.values {
+  position: relative;
+  padding-block: var(--padding-large);
+  border-top: 0.5px solid var(--clr-accent-1-100);
+}
+
+.values p {
+  font-style: italic;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  line-height: 120%;
+}
+
+.values span {
+  color: var(--clr-primary);
+  font-size: var(--fs-800);
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-400: 1.25rem;
+
+    --padding: 2rem;
+    --padding-large: calc(var(--padding) * 1.25);
+
+    --fs-400: 1.5rem;
+    --fs-700: 5rem;
+    --fs-800: 5.5rem;
+  }
+
+  .container {
+    border-bottom-right-radius: 108px;
+    max-width: 830px;
+  }
+
+  .inputs {
+    max-width: 500px;
+    gap: 1.5rem;
+  }
+
+  .arrow-btn {
+    position: absolute;
+    right: 0%;
+    left: unset;
+    transform: translate(0%, 50%);
+    width: 65px;
+  }
+
+  .arrow-btn svg {
+    scale: unset;
+  }
+}
