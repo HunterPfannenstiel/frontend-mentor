@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./index.js"></script>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div class="card-header">
+        <div class="cards">
+          <div class="card card-back">
+            <p id="card-cvc">000</p>
+          </div>
+          <div class="card card-front">
+            <img src="./images/card-logo.svg" />
+            <div>
+              <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+              <div class="card-details">
+                <p id="card-name">Jane Appleseed</p>
+                <p id="card-expire">
+                  <span id="card-month">00</span>/<span id="card-year">00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details-container">
+        <form class="card-form" id="form">
+          <fieldset class="ch-name">
+            <label for="name">Cardholder Name</label>
+            <input placeholder="e.g. Jane Appleseed" id="name" />
+          </fieldset>
+          <fieldset class="card-number">
+            <label for="number">Card Number</label>
+            <input placeholder="e.g. 1234 5678 9123 0000" id="number" />
+          </fieldset>
+          <fieldset class="exp-cvc">
+            <div class="exp">
+              <label for="month">Exp. Date (MM/YY)</label>
+              <div>
+                <input placeholder="MM" id="month" />
+                <input placeholder="YY" id="year" />
+              </div>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input placeholder="e.g. 123" id="cvc" />
+            </div>
+          </fieldset>
+          <button class="card-button" type="submit" id="form-btn">
+            Confirm
+          </button>
+        </form>
+        <div class="complete hide" id="complete">
+          <img src="./images/icon-complete.svg" />
+          <div class="message">
+            <p class="thanks">Thank you!</p>
+            <p>We've added your card details</p>
+          </div>
+          <button class="card-button" type="button" id="continue-btn">
+            Continue
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
