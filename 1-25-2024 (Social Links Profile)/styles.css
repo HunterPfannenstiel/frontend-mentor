@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit; /*Forces you to declare what heading levels look like*/
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: "none";
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  --clr-primary: hsl(75, 94%, 57%);
+
+  --clr-accent-1: hsl(0, 0%, 100%); /*White*/
+  --clr-accent-2-400: hsl(0, 0%, 20%);
+  --clr-accent-2-600: hsl(0, 0%, 12%);
+  --clr-accent-2-800: hsl(0, 0%, 8%);
+
+  --padding-sm: calc(var(--padding) * 0.5);
+  --padding: 1.5rem;
+
+  --font-family: "Inter", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold-50: 600;
+  --fw-bold-100: 700;
+
+  --fs-300: 0.75rem;
+  --fs-400: 0.875rem;
+  --fs-550: 1.15rem;
+
+  --b-rad-sm: 8px;
+  --b-rad-md: 12px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  color: var(--clr-accent-1);
+  min-height: 100vh;
+  background-color: var(--clr-accent-2-800);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  padding: var(--padding);
+  border-radius: var(--b-rad-md);
+  background-color: var(--clr-accent-2-600);
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
+  text-align: center;
+  max-width: 350px;
+}
+
+.image-container {
+  width: 75px;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name {
+  font-weight: var(--fw-bold-50);
+  font-size: var(--fs-550);
+  margin-bottom: var(--padding-sm);
+  letter-spacing: 0.5px;
+}
+
+.location {
+  color: var(--clr-primary);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold-50);
+}
+
+.loading a {
+  display: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-sm);
+}
+
+.links a {
+  background-color: var(--clr-accent-2-400);
+  padding: var(--padding-sm);
+  border-radius: var(--b-rad-sm);
+  font-weight: var(--fw-bold-50);
+  transition: background-color 200ms linear;
+}
+
+.content a {
+  width: 100%;
+}
+
+.links a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-accent-2-800);
+  transition: background-color 200ms linear;
+}
